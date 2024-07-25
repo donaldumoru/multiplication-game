@@ -138,7 +138,6 @@ button {
 }
 
 .play-again {
-  position: absolute;
   display: flex;
   flex-direction: column;
   gap: 30px;
