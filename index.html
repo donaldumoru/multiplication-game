@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.cdnfonts.com/css/calculator" rel="stylesheet" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="game-wrapper">
+      <div class="game-container">
+        <div class="timer-score">
+          <div class="countdown-timer">
+            <p class="timer"></p>
+          </div>
+          <div class="game-title">
+            <p class="score">Score: 3</p>
+          </div>
+        </div>
+
+        <div class="difficulty-container">
+          <select class="difficulty" name="difficulty">
+            <option class="" value="easy">Easy</option>
+            <option class="" value="medium">Medium</option>
+            <option class="" value="difficult">Difficult</option>
+          </select>
+
+          <button class="btn-difficulty">Choose</button>
+        </div>
+
+        <div class="gameplay">
+          <div class="game-details">
+            <p class="question"></p>
+          </div>
+
+          <div class="input-field">
+            <input
+              class="input-number"
+              type="number"
+              placeholder="Enter your answer"
+            />
+          </div>
+          <button class="submit">Sumbit</button>
+        </div>
+
+        <div class="play-again">
+          <p class="game-over">Game Over 😢</p>
+          <p class="game-over-score"></p>
+          <button class="play-again-btn">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
