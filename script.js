@@ -85,6 +85,7 @@ submitButton.addEventListener('click', function () {
     timerDisplay.style.display = 'none';
     scoreDisplay.style.display = 'none';
     gameOverScore.textContent = `Score: 0`;
+    gameOverText.textContent = 'Game Over 😢';
   } else if (userInput === randomNumber) {
     score++;
     scoreDisplay.textContent = `Score: ${score}`;
