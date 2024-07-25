@@ -14,13 +14,15 @@ let playAgainBtn = document.querySelector('.play-again-btn');
 let timerDisplay = document.querySelector('.timer');
 let gameOverText = document.querySelector('.game-over');
 let gameOverScore = document.querySelector('.game-over-score');
+let highscoreDisplay = document.querySelector('.high-score');
 let score = 3;
 let randomNumber;
+let highscore = 0;
 
-// let userDifficulty = 'easy';
 gameContainer.style.display = 'none';
 playAgainContainer.style.display = 'none';
 
+// Generate numbers based on user difficulty choice
 function getRandomNumbers() {
   scoreDisplay.textContent = `Score: ${score}`;
   let userDifficulty = chooseDifficulty.value;
@@ -53,11 +55,11 @@ function playGame() {
 
   randomNumber = getRandomNumbers();
 
+  // Countown timer
   let count = 60;
   function countdownTimer() {
     const timer = setInterval(function () {
       count--;
-      // console.log(count);
       timerDisplay.textContent = count;
       if (count === 0) {
         clearInterval(timer);
@@ -67,6 +69,10 @@ function playGame() {
         gameOverText.textContent = `Time's Up ⌛😢`;
         gameOverScore.textContent = `Score: ${score}`;
         timerDisplay.style.display = 'none';
+        if (score > highscore) {
+          highscore = score;
+          highscoreDisplay.textContent = `Highscore: ${score}`;
+        }
       } else if (score === 0 + 1) {
         clearInterval(timer);
       }
@@ -76,6 +82,7 @@ function playGame() {
   countdownTimer();
 }
 
+// Game logic
 submitButton.addEventListener('click', function () {
   let userInput = Number(inputAnswer.value);
 
@@ -100,6 +107,7 @@ submitButton.addEventListener('click', function () {
 
 buttonDifficulty.addEventListener('click', playGame);
 
+// Play again function to reset game
 function playAgain() {
   difficultyContainer.style.display = 'flex';
   playAgainContainer.style.display = 'none';
