@@ -19,6 +19,8 @@ let score = 3;
 let randomNumber;
 let highscore = 0;
 
+let wrongArray = [];
+
 gameContainer.style.display = 'none';
 playAgainContainer.style.display = 'none';
 
@@ -95,10 +97,10 @@ submitButton.addEventListener('click', function () {
     gameOverText.textContent = 'Game Over 😢';
   } else if (userInput === randomNumber) {
     score++;
-    scoreDisplay.textContent = `Score: ${score}`;
+    scoreDisplay.textContent = `Score: ${score} 😁`;
   } else {
     score--;
-    scoreDisplay.textContent = `Score: ${score}`;
+    scoreDisplay.textContent = `Score: ${score} 😞`;
   }
 
   randomNumber = getRandomNumbers();
