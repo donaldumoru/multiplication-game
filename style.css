@@ -164,6 +164,7 @@ button {
 .play-again-btn:hover {
   background-color: rgba(6, 55, 95, 0.89);
 }
+
 /* Media Queries for Mobile Devices */
 @media only screen and (max-width: 768px) {
   .game-container {

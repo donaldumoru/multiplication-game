@@ -15,6 +15,8 @@ let timerDisplay = document.querySelector('.timer');
 let gameOverText = document.querySelector('.game-over');
 let gameOverScore = document.querySelector('.game-over-score');
 let highscoreDisplay = document.querySelector('.high-score');
+
+let emojiDisplay = document.querySelector('.emoji');
 let score = 3;
 let randomNumber;
 let highscore = 0;
