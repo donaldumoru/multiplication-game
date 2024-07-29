@@ -24,7 +24,7 @@ playAgainContainer.style.display = 'none';
 
 // Generate numbers based on user difficulty choice
 function getRandomNumbers() {
-  scoreDisplay.textContent = `Score: ${score}`;
+  // scoreDisplay.textContent = `Score: ${score}`;
   let userDifficulty = chooseDifficulty.value;
 
   difficultyContainer.style.display = 'none';
