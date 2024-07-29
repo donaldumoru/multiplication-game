@@ -24,7 +24,7 @@ playAgainContainer.style.display = 'none';
 
 // Generate numbers based on user difficulty choice
 function getRandomNumbers() {
-  // scoreDisplay.textContent = `Score: ${score}`;
+  scoreDisplay.textContent = `Score: ${score}`;
   let userDifficulty = chooseDifficulty.value;
 
   difficultyContainer.style.display = 'none';
@@ -86,7 +86,7 @@ function playGame() {
 submitButton.addEventListener('click', function () {
   let userInput = Number(inputAnswer.value);
 
-  if (score === 0 + 1) {
+  if (score < 2) {
     gameContainer.style.display = 'none';
     playAgainContainer.style.display = 'flex';
     timerDisplay.style.display = 'none';
